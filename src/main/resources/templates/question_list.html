@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<table>
+    <thead>
+    <tr>
+        <th>제목</th>
+        <th>작성일시</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="question : ${questionList}">                       // for each와 같은 반복. ${}를 통해 데이터를 읽음
+        <td th:text="${question.subject}"></td>
+        <td th:text="${question.createDate}"></td>
+    </tr>
+    </tbody>
+</table>
+</html>
