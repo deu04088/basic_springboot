@@ -1,0 +1,59 @@
+HELP.md
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+*.log
+*.tmp
+*.bak
+
+# gradle wrapper 캐시
+.gradle/
+
+# gradle local cache
+.gradle-cache/
+
+# JAR/WAR/EAR 산출물
+*.jar
+*.war
+*.ear
+
+# 환경 설정
+application-*.yml
+application-*.yaml
+application-*.properties
+
+# 예: application-local.yml 같은 로컬 전용 설정 파일 제외 가능
