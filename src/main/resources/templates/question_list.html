@@ -11,8 +11,10 @@
     </tr>
     </thead>
     <tbody>
-    <tr th:each="question : ${questionList}">                       <!--for each와 같은 반복. ${}를 통해 데이터를 읽음-->
-        <td th:text="${question.subject}"></td>
+    <tr th:each="question, index : ${questionList}">                       <!--for each와 같은 반복. ${}를 통해 데이터를 읽음-->
+        <td>
+            <a th:href="@{|/question/detail/${question.id}|}" th:text="${question.subject}"></a>           <!-- 링크 추가-->
+        </td>
         <td th:text="${question.createDate}"></td>
     </tr>
     </tbody>
