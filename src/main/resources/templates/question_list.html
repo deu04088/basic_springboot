@@ -11,7 +11,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr th:each="question : ${questionList}">                       // for each와 같은 반복. ${}를 통해 데이터를 읽음
+    <tr th:each="question : ${questionList}">                       <!--for each와 같은 반복. ${}를 통해 데이터를 읽음-->
         <td th:text="${question.subject}"></td>
         <td th:text="${question.createDate}"></td>
     </tr>
