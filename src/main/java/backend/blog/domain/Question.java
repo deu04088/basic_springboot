@@ -25,4 +25,5 @@ public class Question {
 
     @OneToMany(mappedBy = "question", cascade = CascadeType.REMOVE)             // 참조 속성 question을 mappedBy에 전달. 삭제 설정
     private List<Answer> answers;
+
 }
