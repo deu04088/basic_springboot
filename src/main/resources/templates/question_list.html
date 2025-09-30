@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="en" >
-<head>
-    <meta charset="UTF-8">
-</head>
-<link rel="stylesheet" type="text/css" th:href="@{/bootstrap.min.css}">
-<div class="container my-3">
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout}">
+<div layout:fragment="content" class="container my-3">
     <table class="table">
         <thead class="table-dark">
         <tr>
@@ -14,10 +9,10 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="question, loop : ${questionList}">                       <!--for each와 같은 반복. ${}를 통해 데이터를 읽음-->
+        <tr th:each="question, loop : ${questionList}">
             <td th:text="${loop.count}"></td>
             <td>
-                <a th:href="@{|/question/detail/${question.id}|}" th:text="${question.subject}"></a>           <!-- 링크 추가-->
+                <a th:href="@{|/question/detail/${question.id}|}" th:text="${question.subject}"></a>
             </td>
             <td th:text="${#temporals.format(question.createDate, 'yyyy-MM-dd HH:mm')}"></td>
         </tr>
@@ -25,4 +20,5 @@
     </table>
     <a th:href="@{/question/create}" class="btn btn-primary">질문 등록하기</a>
 </div>
+
 </html>
